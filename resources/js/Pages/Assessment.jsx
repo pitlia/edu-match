@@ -172,14 +172,14 @@ export default function Assessment({ criteria, majors, riasecQuestions }) {
                 {/* Header Info */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                        <div className="flex items-center gap-2 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                        <div className="flex items-center gap-2 text-indigo-600 text-xs font-semibold uppercase tracking-wider mb-2">
                             <Compass className="w-4 h-4" />
                             Asesmen Adaptif SPK SMARTER
                         </div>
-                        <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
+                        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                             Instrumen Tes Penjurusan Siswa
                         </h1>
-                        <p className="text-sm text-slate-400 mt-1">
+                        <p className="text-sm text-slate-600 mt-1">
                             Integrasi nilai rapor akademik & instrumen psikometrik RIASEC Holland Code.
                         </p>
                     </div>
@@ -198,16 +198,16 @@ export default function Assessment({ criteria, majors, riasecQuestions }) {
                             key={tab.stepNum}
                             type="button"
                             onClick={() => setStep(tab.stepNum)}
-                            className={`p-3 rounded-xl border text-left transition-all ${
+                            className={`p-3 rounded-2xl border text-left transition-all ${
                                 step === tab.stepNum
-                                    ? 'bg-indigo-600/20 border-indigo-500/50 text-white'
-                                    : 'bg-slate-900/50 border-slate-800 text-slate-400'
+                                    ? 'bg-indigo-50 border-indigo-300 text-indigo-900 shadow-xs'
+                                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
                             }`}
                         >
                             <div className="flex items-center gap-2 text-xs font-semibold">
                                 <span
                                     className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] ${
-                                        step === tab.stepNum ? 'bg-indigo-500 text-white' : 'bg-slate-800'
+                                        step === tab.stepNum ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'
                                     }`}
                                 >
                                     {tab.stepNum}

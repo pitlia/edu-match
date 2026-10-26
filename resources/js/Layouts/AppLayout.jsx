@@ -17,7 +17,7 @@ export default function AppLayout({ children }) {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
             {/* Header (Top Nav) */}
             <Header navItems={navItems} />
 

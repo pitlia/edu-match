@@ -19,17 +19,17 @@ export default function Result({ assessment, majors }) {
 
             <div className="max-w-4xl mx-auto space-y-8">
                 {/* Header Title */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-6">
                     <div>
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-2">
-                            <CheckCircle2 className="w-3.5 h-3.5" />
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold mb-2">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                             Kalkulasi SPK SMARTER Berhasil
                         </div>
-                        <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
+                        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                             Hasil Rekomendasi Penjurusan
                         </h1>
-                        <p className="text-sm text-slate-400 mt-1">
-                            Calon Siswa: <span className="text-white font-semibold">{assessment.student_name}</span>{' '}
+                        <p className="text-sm text-slate-600 mt-1">
+                            Calon Siswa: <span className="text-slate-900 font-semibold">{assessment.student_name}</span>{' '}
                             {assessment.student_nisn && `(NISN: ${assessment.student_nisn})`}
                         </p>
                     </div>
@@ -37,15 +37,15 @@ export default function Result({ assessment, majors }) {
                     <div className="flex items-center gap-2">
                         <button
                             onClick={() => window.print()}
-                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700 transition-all"
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium border border-slate-200 shadow-2xs transition-all"
                         >
-                            <Printer className="w-4 h-4" /> Cetak Hasil
+                            <Printer className="w-4 h-4 text-slate-600" /> Cetak Hasil
                         </button>
                         <Link
                             href="/tes-penjurusan"
-                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700 transition-all"
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium border border-slate-200 shadow-2xs transition-all"
                         >
-                            <RotateCcw className="w-4 h-4" /> Tes Ulang
+                            <RotateCcw className="w-4 h-4 text-slate-600" /> Tes Ulang
                         </Link>
                     </div>
                 </div>

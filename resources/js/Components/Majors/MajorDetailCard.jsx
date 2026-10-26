@@ -12,32 +12,32 @@ export default function MajorDetailCard({ major }) {
 
     const colorClasses = {
         indigo: {
-            bg: 'bg-indigo-500/10',
-            border: 'border-indigo-500/30',
-            text: 'text-indigo-400',
-            badge: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
-            btn: 'bg-indigo-600 hover:bg-indigo-500',
+            bg: 'bg-indigo-50',
+            border: 'border-indigo-100',
+            text: 'text-indigo-600',
+            badge: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+            btn: 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-indigo-500/20',
         },
         purple: {
-            bg: 'bg-purple-500/10',
-            border: 'border-purple-500/30',
-            text: 'text-purple-400',
-            badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
-            btn: 'bg-purple-600 hover:bg-purple-500',
+            bg: 'bg-purple-50',
+            border: 'border-purple-100',
+            text: 'text-purple-600',
+            badge: 'bg-purple-50 text-purple-700 border-purple-200',
+            btn: 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-500/20',
         },
         rose: {
-            bg: 'bg-rose-500/10',
-            border: 'border-rose-500/30',
-            text: 'text-rose-400',
-            badge: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
-            btn: 'bg-rose-600 hover:bg-rose-500',
+            bg: 'bg-rose-50',
+            border: 'border-rose-100',
+            text: 'text-rose-600',
+            badge: 'bg-rose-50 text-rose-700 border-rose-200',
+            btn: 'bg-rose-600 hover:bg-rose-700 text-white shadow-rose-500/20',
         },
         emerald: {
-            bg: 'bg-emerald-500/10',
-            border: 'border-emerald-500/30',
-            text: 'text-emerald-400',
-            badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-            btn: 'bg-emerald-600 hover:bg-emerald-500',
+            bg: 'bg-emerald-50',
+            border: 'border-emerald-100',
+            text: 'text-emerald-600',
+            badge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+            btn: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-500/20',
         },
     };
 
@@ -46,7 +46,7 @@ export default function MajorDetailCard({ major }) {
     const percentFilled = Math.min(100, Math.round((major.enrolled_count / major.quota) * 100));
 
     return (
-        <article className={`rounded-3xl border ${colors.border} bg-slate-900/60 backdrop-blur-md p-6 sm:p-8 flex flex-col justify-between hover:border-slate-500 transition-all`}>
+        <article className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
                 {/* Header Badge */}
                 <div className="flex items-center justify-between mb-4">
@@ -55,7 +55,7 @@ export default function MajorDetailCard({ major }) {
                             <Icon className={`w-6 h-6 ${colors.text}`} />
                         </div>
                         <div>
-                            <h2 className="text-xl font-extrabold text-white">{major.name}</h2>
+                            <h2 className="text-xl font-extrabold text-slate-900">{major.name}</h2>
                             <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${colors.badge}`}>
                                 Kode: {major.code}
                             </span>
@@ -63,18 +63,18 @@ export default function MajorDetailCard({ major }) {
                     </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
                     {major.description}
                 </p>
 
                 {/* Fasilitas */}
                 <div className="mb-6">
-                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                        <Wrench className="w-3.5 h-3.5 text-indigo-400" /> Fasilitas & Studio Unggulan:
+                    <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <Wrench className="w-3.5 h-3.5 text-indigo-600" /> Fasilitas & Studio Unggulan:
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {major.facilities?.map((f, i) => (
-                            <div key={i} className="flex items-center gap-2 text-xs text-slate-300 bg-slate-950/60 p-2 rounded-xl border border-slate-800">
+                            <div key={i} className="flex items-center gap-2 text-xs text-slate-700 bg-slate-50 p-2 rounded-xl border border-slate-200">
                                 <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${colors.text}`} />
                                 <span className="truncate">{f}</span>
                             </div>
@@ -84,12 +84,12 @@ export default function MajorDetailCard({ major }) {
 
                 {/* Prospek Karir */}
                 <div className="mb-6">
-                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                        <Briefcase className="w-3.5 h-3.5 text-pink-400" /> Prospek Karir Lulusan:
+                    <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <Briefcase className="w-3.5 h-3.5 text-pink-600" /> Prospek Karir Lulusan:
                     </h3>
                     <div className="flex flex-wrap gap-1.5">
                         {major.career_prospects?.map((c, i) => (
-                            <span key={i} className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-slate-800 text-slate-200 border border-slate-700">
+                            <span key={i} className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
                                 {c}
                             </span>
                         ))}
@@ -97,16 +97,16 @@ export default function MajorDetailCard({ major }) {
                 </div>
 
                 {/* Kuota Information */}
-                <div className="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 mb-6">
+                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 mb-6">
                     <div className="flex justify-between items-center text-xs mb-2">
-                        <span className="text-slate-400">Pagu Kuota: {major.quota} Siswa</span>
-                        <span className="font-bold text-white">
+                        <span className="text-slate-500 font-medium">Pagu Kuota: {major.quota} Siswa</span>
+                        <span className="font-bold text-slate-900">
                             {major.enrolled_count} Terdaftar ({percentFilled}%)
                         </span>
                     </div>
-                    <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
                         <div
-                            className="h-full bg-indigo-500 rounded-full transition-all"
+                            className={`h-full ${colors.btn.split(' ')[0]} rounded-full transition-all`}
                             style={{ width: `${percentFilled}%` }}
                         />
                     </div>
@@ -114,16 +114,16 @@ export default function MajorDetailCard({ major }) {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-4 border-t border-slate-800/80 flex items-center gap-3">
+            <div className="pt-4 border-t border-slate-200 flex items-center gap-3">
                 <Link
                     href="/tes-penjurusan"
-                    className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-all"
+                    className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold border border-slate-200 shadow-2xs transition-all"
                 >
                     <Compass className="w-3.5 h-3.5" /> Uji Kecocokan
                 </Link>
                 <Link
                     href={`/pendaftaran?major_id=${major.id}`}
-                    className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl ${colors.btn} text-white text-xs font-semibold shadow-md transition-all`}
+                    className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl ${colors.btn} text-xs font-semibold shadow-md transition-all`}
                 >
                     Daftar Jurusan <ArrowRight className="w-3.5 h-3.5" />
                 </Link>

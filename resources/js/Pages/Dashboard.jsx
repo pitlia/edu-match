@@ -18,14 +18,14 @@ export default function Dashboard({ majors, stats }) {
             <section aria-label="Program Keahlian" className="mb-14">
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
                     <div>
-                        <h2 className="text-2xl font-bold text-white">4 Program Keahlian Unggulan</h2>
-                        <p className="text-slate-400 text-sm mt-1">
+                        <h2 className="text-2xl font-bold text-slate-900">4 Program Keahlian Unggulan</h2>
+                        <p className="text-slate-600 text-sm mt-1">
                             Setiap program keahlian memiliki matriks bobot kriteria independen berbasis kurva ROC.
                         </p>
                     </div>
                     <Link
                         href="/katalog-jurusan"
-                        className="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                        className="text-sm font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
                     >
                         Detail Fasilitas & Karir <ArrowRight className="w-4 h-4" />
                     </Link>

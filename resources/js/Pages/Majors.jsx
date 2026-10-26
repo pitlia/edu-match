@@ -12,14 +12,14 @@ export default function Majors({ majors }) {
             <div className="max-w-6xl mx-auto space-y-10">
                 {/* Header */}
                 <div className="text-center max-w-2xl mx-auto">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold mb-3">
-                        <BookOpen className="w-3.5 h-3.5" />
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold mb-3">
+                        <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
                         Katalog 4 Program Keahlian
                     </div>
-                    <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
+                    <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
                         Profil & Kompetensi Kejuruan
                     </h1>
-                    <p className="text-sm text-slate-400 mt-2">
+                    <p className="text-sm text-slate-600 mt-2">
                         Pelajari kurikulum, sarana prasarana modern, prospek karir industri, dan kriteria kualifikasi yang dicari oleh masing-masing jurusan.
                     </p>
                 </div>
