@@ -9,10 +9,6 @@ export default function HeroSection({ stats }) {
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-pink-200/20 blur-3xl pointer-events-none" />
 
             <div className="relative z-10 max-w-3xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold mb-6">
-                    <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                    Penerimaan Peserta Didik Baru (PPDB) SMK 2026/2027
-                </div>
 
                 <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-4">
                     Temukan Jurusan Impianmu dengan{' '}
